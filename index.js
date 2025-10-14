@@ -24,6 +24,13 @@ app.use('/api/pacientes', pacienteRoutes);
 //conectamos a la base de datos
 conectarDB();
 
-app.listen(4000, () => {
-    console.log('El servidor está corriendo en el puerto 4000 🚀')
+// app.listen(4000, () => {
+//     console.log('El servidor está corriendo en el puerto 4000 🚀')
+// });
+
+// Puerto dinámico para Render
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
+    console.log(`El servidor está corriendo en el puerto ${PORT}`);
 });
