@@ -81,11 +81,22 @@ const PatientSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    observaciones: {
+        type: String,
+        required: false
+    },
+    tratamiento: {
+        type: String,
+        required: false
+    },
+    entregamedicina: {
+        type: String,
+        required: true
+    },
     fechaCreacion: {
         type: Date,
         default: Date.now()
     }
-
 });
 
 module.exports = mongoose.model('Patient', PatientSchema);

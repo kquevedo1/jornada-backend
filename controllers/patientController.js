@@ -57,6 +57,9 @@ exports.actualizarPaciente = async (req, res) => {
             agua,
             basura,
             dispocionexcretas,
+            observaciones,
+            tratamiento,
+            entregamedicina,
             estadopaciente
         } = req.body;
         let patient = await Patient.findById(req.params.id);
@@ -84,6 +87,9 @@ exports.actualizarPaciente = async (req, res) => {
         patient.agua=agua;
         patient.basura=basura;
         patient.dispocionexcretas=dispocionexcretas;
+        patient.observaciones=observaciones;
+        patient.tratamiento=tratamiento;
+        patient.entregamedicina=entregamedicina;
         patient.estadopaciente=estadopaciente;
 
         patient = await Patient.findOneAndUpdate({  _id: req.params.id }, patient, { new: true} )
