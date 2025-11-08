@@ -37,6 +37,10 @@ const PatientSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    mediocontacto: {
+        type: String,
+        required: true
+    },
     etnia: {
         type: String,
         required: true

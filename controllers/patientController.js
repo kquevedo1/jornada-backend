@@ -47,6 +47,7 @@ exports.actualizarPaciente = async (req, res) => {
             escolaridad,
             telefono,
             duenotelefono,
+            mediocontacto,
             etnia,
             ambientecasa,
             piso,
@@ -73,6 +74,7 @@ exports.actualizarPaciente = async (req, res) => {
         patient.escolaridad=escolaridad;
         patient.telefono=telefono;
         patient.duenotelefono=duenotelefono;
+        patient.mediocontacto=mediocontacto;
         patient.etnia=etnia;
         patient.ambientecasa=ambientecasa;
         patient.piso=piso;
